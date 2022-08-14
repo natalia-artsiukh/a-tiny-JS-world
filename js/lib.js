@@ -11,7 +11,7 @@ const woman = {
   legs: 2,
   name: 'Mary',
   gender: 'female',
-  saying: 'Hi everyone!',
+  saying: 'Hi everyone',
   friends: 'Tom, Rex, Halle'
 };
 const cat = {
@@ -39,11 +39,9 @@ const catwoman = {
   friends: 'Mary, Tom, Batman'
 };
 
-print(man.saying + '. My name is ' + man.name + '. I\'m ' + man.gender + '. I have ' + man.hands + ' hands and ' + man.legs + ' legs. I\'m friends with ' + man.friends + '.');
-print(woman.saying + ' My name is ' + woman.name + '. I\'m ' + woman.gender + '. I have ' + woman.hands + ' hands and ' + woman.legs + ' legs. I\'m friends with ' + woman.friends + '.');
-print(cat.saying + '. My name is ' + cat.name + '.  I\'m ' + cat.gender + '. I have ' + cat.hands + ' hands but ' + cat.legs + ' legs. I\'m friends with ' + cat.friends + '.');
-print(dog.saying + '. My name is ' + dog.name + '.  I\'m ' + dog.gender + '. I have ' + dog.hands + ' hands but ' + dog.legs + ' legs. I\'m friends with ' + dog.friends + '.');
-print(catwoman.saying + '. My name is ' + catwoman.name + '.  I\'m ' + catwoman.gender + '. I have ' + catwoman.hands + ' hands and ' + catwoman.legs + ' legs. I\'m friends with ' + catwoman.friends + '.');
+const habitants = [man, woman, cat, dog, catwoman];
+
+habitants.forEach(element => {print(element.saying + '! My name is ' + element.name + '. I\'m ' + element.gender + '. I have ' + element.hands + ' hands and ' + element.legs + ' legs. I\'m friends with ' + element.friends + '.'); return;});
 
 function print(message, tag = 'pre') {
   var element = document.createElement(tag);
